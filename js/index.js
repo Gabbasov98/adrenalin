@@ -43,4 +43,12 @@ $(document).ready(function() {
 
     })
 
+    $(".blog__left-tab").click(function() {
+        let path = $(this).attr("data-tab-path");
+        $(".blog__left-tab").removeClass("blog__left-tab--active");
+        $(this).addClass("blog__left-tab--active");
+        $(".blog__content").removeClass("blog__content--active");
+        $(`.blog__content[data-content-path="${path}"]`).addClass("blog__content--active");
+    })
+
 })
